@@ -24,12 +24,12 @@ activity_map <- read.table('activity_labels.txt', col.names=c('id', 'label'))
 activity_map <- setNames(activity_map$label, activity_map$id)
 
 # read train dataset
-train_measurements <- read.table('train/X_train.txt', col.names=measurement_labels)
+train_measurements <- read.table('train/X_train.txt', col.names=features)
 train_subjects <- read.table('train/subject_train.txt', col.names=c('subject'))
 train_activity <- read.table('train/y_train.txt', col.names=c('activity'), colClasses=c('factor'))
 
 # read test dataset
-test_measurements <- read.table('test/X_test.txt', col.names=measurement_labels)
+test_measurements <- read.table('test/X_test.txt', col.names=features)
 test_subjects <- read.table('test/subject_test.txt', col.names=c('subject'))
 test_activity <- read.table('test/y_test.txt', col.names=c('activity'), colClasses=c('factor'))
 
